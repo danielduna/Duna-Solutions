@@ -2,12 +2,13 @@
   "name": "portfolio-site",
   "version": "0.1.0",
   "private": true,
-  "scripts": {
-    "dev": "next dev --turbopack",
-    "build": "next build --no-lint --turbopack",
-    "start": "next start",
-    "lint": "eslint"
-  },
+"scripts": {
+  "dev": "next dev",
+  "build": "next build",
+  "start": "next start",
+  "lint": "next lint"
+}
+,
   "dependencies": {
     "@fontsource-variable/inter": "^5.2.8",
     "@next/font": "^14.2.15",
