@@ -2,12 +2,11 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 
-// Import Inter Variable with stylistic sets
+// Import Inter Variable (no `features` — that goes in CSS now)
 const inter = Inter({
   subsets: ["latin"],
   display: "swap",
   variable: "--font-inter",
-  features: ["ss03", "cv02", "cv11"],
 });
 
 export const metadata: Metadata = {
@@ -24,7 +23,6 @@ export const metadata: Metadata = {
   },
 };
 
-
 export default function RootLayout({
   children,
 }: {
@@ -34,6 +32,7 @@ export default function RootLayout({
     <html lang="en">
       <body
         className={`${inter.variable} font-sans bg-black text-slate-300 antialiased`}
+        // Apply your stylistic sets here instead
         style={{
           fontFeatureSettings: '"ss03", "cv02", "cv11"',
         }}
