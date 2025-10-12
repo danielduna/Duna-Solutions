@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 
-// Import Inter Variable (no `features` — that goes in CSS now)
+// Import Inter Variable
 const inter = Inter({
   subsets: ["latin"],
   display: "swap",
@@ -21,6 +21,33 @@ export const metadata: Metadata = {
     apple: "/apple-touch-icon.png",
     shortcut: "/icon.png",
   },
+
+  // 👇 This controls the thumbnail shown when your site is shared
+  openGraph: {
+    title: "Daniel Duna – Modern Workplace Engineer Portfolio",
+    description:
+      "Explore Daniel Duna’s Microsoft 365, Cloud, and Automation portfolio projects.",
+    url: "https://dunasolutions.co.uk", // <-- replace with your actual domain
+    siteName: "Daniel Duna Portfolio",
+    images: [
+      {
+        url: "/og-image.png", // place this file in your /public directory
+        width: 1200,
+        height: 630,
+        alt: "Daniel Duna Portfolio Preview",
+      },
+    ],
+    locale: "en_GB",
+    type: "website",
+  },
+
+  twitter: {
+    card: "summary_large_image",
+    title: "Daniel Duna – Modern Workplace Engineer Portfolio",
+    description:
+      "Explore Daniel Duna’s Microsoft 365, Cloud, and Automation portfolio projects.",
+    images: ["/og-image.png"],
+  },
 };
 
 export default function RootLayout({
@@ -32,7 +59,6 @@ export default function RootLayout({
     <html lang="en">
       <body
         className={`${inter.variable} font-sans bg-black text-slate-300 antialiased`}
-        // Apply your stylistic sets here instead
         style={{
           fontFeatureSettings: '"ss03", "cv02", "cv11"',
         }}
