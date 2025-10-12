@@ -29,8 +29,9 @@ export default function Home() {
     return () => observer.disconnect();
   }, []);
 
-  const scrollTo = (ref: React.RefObject<HTMLDivElement>) =>
-    ref.current?.scrollIntoView({ behavior: "smooth" });
+  const scrollTo = (ref: React.RefObject<HTMLDivElement | null>) => {
+  ref.current?.scrollIntoView({ behavior: "smooth" });
+};
 
   return (
     <div
