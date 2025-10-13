@@ -13,25 +13,26 @@ export const metadata: Metadata = {
   title: "Daniel Duna",
   description: "Microsoft 365 & Modern Workplace Engineer Portfolio",
   icons: {
+    // All favicon variations (ensure all exist in /public)
     icon: [
       { url: "/favicon.ico", type: "image/x-icon" },
       { url: "/favicon.svg", type: "image/svg+xml" },
       { url: "/favicon-96x96.png", type: "image/png", sizes: "96x96" },
     ],
     apple: "/apple-touch-icon.png",
-    shortcut: "/icon.png",
+    shortcut: "/favicon.ico",
   },
 
-  // 👇 This controls the thumbnail shown when your site is shared
+  // 👇 Social share metadata
   openGraph: {
     title: "Daniel Duna – Modern Workplace Engineer Portfolio",
     description:
       "Explore Daniel Duna’s Microsoft 365, Cloud, and Automation portfolio projects.",
-    url: "https://dunasolutions.co.uk", // <-- replace with your actual domain
+    url: "https://www.dunasolutions.co.uk", // Full live domain
     siteName: "Daniel Duna Portfolio",
     images: [
       {
-        url: "/og-image.png", // place this file in your /public directory
+        url: "/og-image.png", // make sure this file is in /public
         width: 1200,
         height: 630,
         alt: "Daniel Duna Portfolio Preview",
