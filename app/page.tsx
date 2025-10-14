@@ -298,14 +298,18 @@ export default function Home() {
           </motion.div>
         </section>
 
-        {/* PROJECTS */}
-<section id="projects" ref={projectsRef} className="max-w-3xl space-y-10 relative">
+{/* PROJECTS */}
+<section
+  id="projects"
+  ref={projectsRef}
+  className="max-w-3xl space-y-10 relative"
+>
   {/* mobile sticky header */}
-<div className="sticky top-0 -mx-6 px-6 py-3 bg-[#001a12]/60 backdrop-blur-md border-b border-white/5 z-10 md:hidden">
-  <h2 className="text-[0.8rem] font-semibold tracking-[0.15em] text-slate-400 uppercase">
-    PROJECTS
-  </h2>
-</div>
+  <div className="sticky top-0 -mx-6 px-6 py-3 bg-[#001a12]/60 backdrop-blur-md border-b border-white/5 z-10 md:hidden">
+    <h2 className="text-[0.8rem] font-semibold tracking-[0.15em] text-slate-400 uppercase">
+      PROJECTS
+    </h2>
+  </div>
 
   <motion.div
     initial={{ opacity: 0, y: 20 }}
@@ -508,6 +512,59 @@ export default function Home() {
             "Azure AD",
             "SharePoint Online",
             "Scripting",
+          ].map((tag) => (
+            <span
+              key={tag}
+              className="px-3 py-1 text-[11px] font-medium text-white rounded-full transition-all duration-300 hover:scale-105"
+              style={{
+                background:
+                  "linear-gradient(135deg, rgba(0,230,180,0.9), rgba(0,120,255,0.9))",
+                boxShadow: "0 0 10px rgba(0,180,180,0.3)",
+              }}
+            >
+              {tag}
+            </span>
+          ))}
+        </div>
+      </div>
+    </a>
+
+    {/* Duna Solutions Portfolio */}
+    <a
+      href="https://github.com/danielduna/Duna-Solutions"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="group flex flex-col md:flex-row items-start md:items-center gap-6 rounded-2xl p-6 hover:bg-white/5 border border-transparent hover:border-white/10 transition-all duration-300 cursor-pointer"
+    >
+      <div className="relative w-full md:w-[220px] h-[140px] overflow-hidden rounded-lg">
+        <img
+          src="/icon.png"
+          alt="Duna Solutions Portfolio Website"
+          className="object-cover w-full h-full transform transition-transform duration-500 group-hover:scale-105"
+        />
+      </div>
+
+      <div className="flex-1">
+        <h3 className="text-slate-100 font-semibold text-[1rem] flex items-center gap-2">
+          Duna Solutions Portfolio
+          <ArrowUpRight className="w-4 h-4 opacity-70 group-hover:opacity-100 transition-opacity duration-300" />
+        </h3>
+        <p className="text-slate-400 leading-relaxed mt-2 text-[0.9rem]">
+          Personal portfolio site built from scratch with Next.js, TypeScript,
+          and TailwindCSS. Designed to highlight professional experience and
+          projects with smooth animations, a responsive layout, and seamless
+          deployment on Vercel.
+        </p>
+
+        <div className="flex flex-wrap gap-2 mt-3">
+          {[
+            "Next.js",
+            "TypeScript",
+            "TailwindCSS",
+            "Vercel",
+            "UI/UX Design",
+            "Responsive Design",
+            "Portfolio",
           ].map((tag) => (
             <span
               key={tag}
