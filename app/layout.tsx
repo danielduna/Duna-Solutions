@@ -55,9 +55,7 @@ export default function RootLayout({
     <html lang="en">
       <body
         className={`${inter.variable} font-sans bg-black text-slate-300 antialiased`}
-        style={{
-          fontFeatureSettings: '"ss03", "cv02", "cv11"',
-        }}
+        style={{ fontFeatureSettings: '"ss03", "cv02", "cv11"' }}
       >
         {children}
       </body>
