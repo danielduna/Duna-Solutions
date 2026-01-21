@@ -218,8 +218,27 @@ export default function Home() {
             viewport={{ once: true }}
           >
             {[
+			{
+  date: "2026 — Present",
+  role: "Microsoft 365 Specialist",
+  company: "University of Birmingham",
+  link: "https://www.birmingham.ac.uk/",
+  description:
+    "Working as a Microsoft 365 Specialist supporting and enhancing the University’s Microsoft 365 tenancy. Acting as a technical lead across service improvements and projects, with a focus on Intune device management, ServiceNow integration, Teams Rooms Pro, and knowledge article development. Supporting secure, scalable collaboration services across a large enterprise environment while ensuring governance, operational health, and user adoption across the M365 stack.",
+  tags: [
+    "Microsoft 365",
+    "Intune",
+    "ServiceNow",
+    "Teams Rooms Pro",
+    "Exchange Online",
+    "SharePoint Online",
+    "PowerShell",
+    "Knowledge Articles",
+    "Enterprise M365",
+  ],
+},
               {
-                date: "2024 — Present",
+                date: "2024 — 2025",
                 role: "Microsoft 365 Support Analyst",
                 company: "Silicon Reef",
                 link: "https://siliconreef.co.uk/",
